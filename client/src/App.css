@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Container for the forms (Login & Register) */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.App-link {
-  color: #61dafb;
+/* Fade-in effect for components */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Heading styles */
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4a90e2;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4a90e2;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+}
+
+button {
+    padding: 1rem;
+    background-color: #4a90e2;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #2e6ea1;
+    transform: translateY(1px);
+}
+
+/* Text and link styles */
+p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #357ab8;
+    text-decoration: underline;
+}
+
+/* Dashboard styles */
+.dashboard {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.dashboard h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+.dashboard p {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    background-color: #fafafa;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.dashboard p:hover {
+    transform: scale(1.02);
+}
+
+/* Animation for content */
+.dashboard p:nth-child(odd) {
+    animation: slideInFromLeft 0.6s ease;
+}
+
+.dashboard p:nth-child(even) {
+    animation: slideInFromRight 0.6s ease;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsiveness for mobile devices */
+@media (max-width: 500px) {
+    .container {
+        padding: 2rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard h1 {
+        font-size: 1.6rem;
+    }
+
+    .dashboard p {
+        font-size: 1rem;
+    }
 }

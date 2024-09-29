@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
+import PrivateRoute from "./components/PrivateRoute";
 import './App.css';
 
-function App() {
+const App = () => {
+  //storing JWT token
+  const [token, setToken] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/signUp" element={<Register />} />
+        <Route path="/login" element={<Login setToken={setToken} />} />
+        {/* <Route path="/dashboard" element={token ? <Dashboard token = {token} /> : <Login setToken={setToken} /> } />
+         */}
+        {/* Protect the dashboard route */}
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute token={token}>
+              <Dashboard token={token} setToken={setToken} />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

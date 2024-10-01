@@ -86,7 +86,7 @@ This project is a full-stack MERN application that provides a real-time dashboar
    - **Backend**: 
      ```bash
      cd server
-     npm start
+     node app.js / nodemon app.js
      ```
    - **Frontend**: 
      ```bash

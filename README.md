@@ -1,4 +1,4 @@
-# SaaS-Shopify
+# ShopPulse - a SaaS-Shopify app
 
 # E-Commerce Dashboard with Shopify Integration
 

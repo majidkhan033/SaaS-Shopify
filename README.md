@@ -50,19 +50,19 @@ This project is a full-stack MERN application that provides a real-time dashboar
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/majidkhan033/SaaS-Shopify
+   cd SaaS-Shopify
    ```
 
 2. **Install dependencies**:
    For both the frontend and backend, install the necessary dependencies:
    ```bash
    # Backend setup
-   cd backend
+   cd server
    npm install
 
    # Frontend setup
-   cd ../frontend
+   cd ../client
    npm install
    ```
 
@@ -71,7 +71,6 @@ This project is a full-stack MERN application that provides a real-time dashboar
 
    - **Backend (`backend/.env`)**:
      ```plaintext
-     PORT=5000
      MONGO_URI=your_mongodb_connection_string
      JWT_SECRET=your_jwt_secret
      SHOPIFY_API_KEY=your_shopify_api_key
@@ -86,12 +85,12 @@ This project is a full-stack MERN application that provides a real-time dashboar
 4. **Run the project**:
    - **Backend**: 
      ```bash
-     cd backend
+     cd server
      npm start
      ```
    - **Frontend**: 
      ```bash
-     cd frontend
+     cd client
      npm start
      ```
 
@@ -104,13 +103,12 @@ Once the app is running, users can:
 
 - Register and log in to their accounts.
 - Access the dashboard to view real-time Shopify orders.
-- Monitor order details such as order ID, customer information, and order total.
+- Monitor order details such as Total orders, Total sales, Conversion rate.
 
 ## Environment Variables
 
 Make sure to configure the following environment variables:
 
-- `PORT`: Port for the backend server (default is `5000`).
 - `MONGO_URI`: MongoDB connection string.
 - `JWT_SECRET`: Secret key for signing JWT tokens.
 - `SHOPIFY_API_KEY` and `SHOPIFY_API_SECRET`: Shopify credentials for API access.
@@ -121,7 +119,7 @@ Make sure to configure the following environment variables:
 
 - **POST /api/auth/register**  
   Registers a new user.  
-  **Body**: `name`, `email`, `password`
+  **Body**: `firstname`,`lastname`, `email`, `password`, `password2`
 
 - **POST /api/auth/login**  
   Logs in a user and returns a JWT token.  
@@ -140,16 +138,17 @@ Make sure to configure the following environment variables:
 │   ├── public
 │   └── src
 │       ├── components
-│       ├── pages
+|            |──assets
 │       ├── App.js
 │       ├── App.css
 │       └── index.js
 ├── backend
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   ├── server.js
-│   └── config
+│   ├── config
+|   ├── controllers
+│   ├── middleware
+│   ├── model
+│   ├── app.js
+│   └── .env
 └── README.md
 ```
 

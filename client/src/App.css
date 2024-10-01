@@ -305,6 +305,8 @@ p a:hover {
     animation: slideInFromRight 0.6s ease;
 }
 
+
+
 /* Animations */
 @keyframes slideInFromLeft {
     from {

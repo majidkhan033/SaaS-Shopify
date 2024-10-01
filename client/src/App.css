@@ -6,26 +6,30 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: linear-gradient(135deg, #71b7e6, #9b59b6);;
+    /* color: #333; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease;
+     */
+     margin: 0;
 }
 
 /* Container for the forms (Login & Register) */
 .container {
-    width: 100%;
-    max-width: 400px;
+    /* width: 100%; */
+    /* max-width: 400px; */
     background-color: #fff;
-    padding: 3rem;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    animation: fadeIn 0.6s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    text-align: center;
+    /* transition: box-shadow 0.3s ease; */
+    animation: fadeIn 1s ease-in-out;
 }
 
 .container:hover {
@@ -46,10 +50,10 @@ body {
 
 /* Heading styles */
 h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #4a90e2;
-    font-size: 1.8rem;
+    /* text-align: center; */
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.2rem;
     font-weight: 600;
 }
 
@@ -60,61 +64,212 @@ form {
 }
 
 input {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
     border-radius: 8px;
-    font-size: 1rem;
-    background-color: #fafafa;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
-    border-color: #4a90e2;
-    background-color: #fff;
+    /* border-color: #a54ae2; */
+    background-color: #e0e0e0;
     outline: none;
-    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
 button {
-    padding: 1rem;
-    background-color: #4a90e2;
+    padding: 15px;
+    background-color: #9b59b6;
     border: none;
     color: white;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #357ab8;
+    background-color: #8e44ad;
     transform: translateY(-2px);
 }
 
 button:active {
-    background-color: #2e6ea1;
-    transform: translateY(1px);
+    /* background-color: #a54ae2; */
+    transform: translateY(0);
 }
 
 /* Text and link styles */
 p {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #777;
+    /* text-align: center; */
+    margin-top: 20px;
+    font-size: 15px;
+    color: #666;
 }
 
-a {
-    color: #4a90e2;
+p a {
+    color: #9b59b6;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #357ab8;
-    text-decoration: underline;
+p a:hover {
+    color: #8e44ad;
+    /* text-decoration: underline; */
 }
+
+/* App.css
+
+/* General styling for the dashboard */
+/* .dashboard {
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Important for logout button positioning */
+/* } */ 
+
+/* App.css */
+/* General styling for the dashboard */
+/* .dashboard {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+} */
+
+/* Styling for the Logout button */
+/* .logout-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #ff1a1a;
+} */ 
+
+/* Dashboard Container */
+.dashboard-container {
+    min-height: 100vh;
+    padding: 30px;
+    background-color: #f5f7fa;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Styling */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+
+.dashboard-header h1 {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+}
+
+.logout-button {
+    background-color: #a54ae2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #a54ae2;
+}
+
+/* Stats Section */
+.dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Stat Cards */
+.stat-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card p {
+    font-size: 16px;
+    color: #777;
+    margin: 0;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dashboard-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* Styling for the Logout button */
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #a54ae2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #a54ae2;
+}
+
+
 
 /* Dashboard styles */
 .dashboard {
@@ -173,10 +328,18 @@ a:hover {
     }
 }
 
+/* Advanced form animations */
+@media (hover: hover) {
+    input:hover {
+        background-color: #e0e0e0;
+    }
+}
+
 /* Responsiveness for mobile devices */
 @media (max-width: 500px) {
     .container {
-        padding: 2rem;
+        width: 100%;
+        padding: 20px;
     }
 
     input, button {
@@ -184,7 +347,7 @@ a:hover {
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .dashboard h1 {

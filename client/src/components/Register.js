@@ -40,7 +40,7 @@ const Register = () => {
           name="firstname"
           value={userData.firstname}
           onChange={handleChange}
-          placeholder="FirstName"
+          placeholder="First Name"
           required
         />
         <input
@@ -48,7 +48,7 @@ const Register = () => {
           name="lastname"
           value={userData.lastname}
           onChange={handleChange}
-          placeholder="LastName"
+          placeholder="Last Name"
           required
         />
         <input
@@ -81,6 +81,9 @@ const Register = () => {
         Already have an account? <a href="/login">Login</a>
       </p>
     </div>
+
+    
+
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loginUser } from "../api";
 import { useNavigate } from "react-router-dom";
-import '../App.css';
+import "../App.css";
 
 const Login = ({ setToken }) => {
   const [userData, setUserData] = useState({ email: "", password: "" });
@@ -23,31 +23,33 @@ const Login = ({ setToken }) => {
   };
 
   return (
-    <div className="container">
-      <h1>User Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          value={userData.email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          value={userData.password}
-          onChange={handleChange}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
-      <p>
-        Don't have an account? <a href="/register">Register Now!</a>
-      </p>
-    </div>
+    <>
+      <div className="container">
+        <h1>User Login</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            value={userData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            value={userData.password}
+            onChange={handleChange}
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p>
+          Don't have an account? <a href="/signUp">Register Now!</a>
+        </p>
+      </div>
+    </>
   );
 };
 

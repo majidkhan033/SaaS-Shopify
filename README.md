@@ -156,6 +156,3 @@ Make sure to configure the following environment variables:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-Feel free to adjust the project details as per your specific setup!
